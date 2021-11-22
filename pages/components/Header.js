@@ -31,22 +31,42 @@ function Header() {
         </div>
 
         {/* shop section */}
-        <div className="text-white">
-          <div>
+        <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
+          <div className="link">
             <p>Hello Orlando Llerena</p>
-            <p>Account & Lists</p>
+            <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
-          <div>
-            <p>More things here</p>
+          <div className="link">
+            <p>Returns</p>
+            <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
-          <div>
-            <p>cart info here </p>
+          <div className="relative link flex items-center">
+            <span className="absolute top-0 right-0 md:right-10 h-4 w-4 bg-yellow-400 text-center rounded-full text-black font-bold">
+              0
+            </span>
+            <ShoppingCartIcon className="h-10" />
+            <p className=" hidden md:inline font-extrabold md:text-sm mt-2">
+              Cart
+            </p>
           </div>
         </div>
       </div>
 
       {/* secondary navbar */}
-      <div></div>
+      <div className="flex item-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
+        <p className="link flex items-center">
+          <MenuIcon className="h-6 mr-1" />
+          All
+        </p>
+        <p className="link">Prime Video</p>
+        <p className="link">Amazon Business</p>
+        <p className="link">Today's Deals</p>
+        <p className="link hidden lg:inline-flex">Best Sellers</p>
+        <p className="link hidden lg:inline-flex">Customer NonService</p>
+        <p className="link hidden lg:inline-flex">This is NOT a Real Site</p>
+        <p className="link hidden lg:inline-flex">Send me Gift Cards</p>
+        <p className="link hidden lg:inline-flex">Thanks Family</p>
+      </div>
     </header>
   );
 }
